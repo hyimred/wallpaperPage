@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap 4 Website Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <script src="https://kit.fontawesome.com/f0fa6fedb5.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+  <style>
+  .fakeimg {
+    height: 200px;
+    background: #aaa;
+  }
+  #header {
+  	 background-image: url(background.gif);
+  	 background-position: center;
+  	 display: cover;
+  	 height: 400px;
+  	 width: auto;
+  }
+
+	  .typewriter h1 {
+	  overflow: hidden;
+	  text-align: center;
+	  border-right: .15em solid orange;
+	  white-space: nowrap;
+	  margin: 0 auto;
+	  letter-spacing: .15em;
+	  animation: 
+	    typing 3.5s steps(40, end),
+	    blink-caret .75s step-end infinite;
+	}
+
+	@keyframes typing {
+	  from { width: 0 }
+	  to { width: 100% }
+	}
+
+	@keyframes blink-caret {
+	  from, to { border-color: transparent }
+	  50% { border-color: orange; }
+	}
+
+  img {
+    width: 400px;
+    border-radius: 30px;
+  }
+
+  li {
+    list-style-type: none;
+  }
+
+  </style>
+</head>
+<body>
+
+<div class="jumbotron text-center" id="header" style="margin-bottom:0;">
+</div>
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
+    <div class="typewriter">
+    	<h1>Wallpaper Finder.</h1>
+    </div>
+</nav>
+
+<div class="container mt-3">
+  <div class="row">
+    <div class="col-11"><h2>Fájlkereső</h2></div>
+    <div class="col-1"><a href="index.html"><i class="fas fa-images"></i></a></div>
+  </div>
+
+  <p>Itt rá tudsz keresni az oldalon található összes háttérre kategória, vagy név alapján:</p>  
+  <input class="form-control" id="myInput" type="text" placeholder="Search..">
+  <br>
+  <table class="table table-borderless">
+    <thead>
+      <tr>
+        <th>Név</th>
+        <th>Kategória</th>
+        <th>Felbontás</th>
+        <th>Szűrő</th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody id="myTable">
+      <tr>
+        <td>Kagerou Project</td>
+        <td>Anime</td>
+        <td>1920x1080</td>
+        <td>Tateyama Ayano</td>
+        <td><a href="#" data-toggle="popover" title="Kagerou daze" data-img="wallpaper/01.jpg"><i class="fas fa-search"></i></a></td>
+        <td><i class="fas fa-download"></i></td>
+      </tr>
+      <tr>
+        <td>Móló</td>
+        <td>Tájkép</td>
+        <td>1920x1080</td>
+        <td>Vízpart</td>
+        <td><a href="#" data-toggle="popover" title="Móló" data-img="wallpaper/13.jpg"><i class="fas fa-search"></i></a></td>
+        <td><i class="fas fa-download"></i></td>
+      </tr>
+      <tr>
+        <td>Áramkör</td>
+        <td>Tech</td>
+        <td>1920x1080</td>
+        <td>Programozás</td>
+        <td><a href="#" data-toggle="popover" title="Áramkör" data-img="wallpaper/25.jpg"><i class="fas fa-search"></i></a></td>
+        <td><i class="fas fa-download"></i></td>
+      </tr>
+      <tr>
+        <td>Steins;Gate</td>
+        <td>Anime</td>
+        <td>1920x1080</td>
+        <td>Okabe Rintaro, Makise Kurisu</td>
+        <td><a href="#" data-toggle="popover" title="Steins;Gate" data-img="wallpaper/02.jpg"><i class="fas fa-search"></i></a></td>
+        <td><i class="fas fa-download"></i></td>
+      </tr>
+      <tr>
+        <td>Folyó</td>
+        <td>Tájkép</td>
+        <td>1920x1080</td>
+        <td>Vízpart</td>
+        <td><a href="#" data-toggle="popover" title="Folyó" data-img="wallpaper/14.jpg"><i class="fas fa-search"></i></a></td>
+        <td><i class="fas fa-download"></i></td>
+      </tr>
+      <tr>
+        <td>Python</td>
+        <td>Tech</td>
+        <td>1920x1080</td>
+        <td>Programozás</td>
+        <td><a href="#" data-toggle="popover" title="Python" data-img="wallpaper/26.jpg"><i class="fas fa-search"></i></a></td>
+        <td><i class="fas fa-download"></i></td>
+      </tr>
+      <tr>
+        <td>Cisco</td>
+        <td>Tech</td>
+        <td>1920x1080</td>
+        <td>Hálózat</td>
+        <td><a href="#" data-toggle="popover" title="Cisco" data-img="wallpaper/27.png"><i class="fas fa-search"></i></a></td>
+        <td><i class="fas fa-download"></i></td>
+      </tr>
+      <tr>
+        <td>Mushoku Tensei</td>
+        <td>Anime</td>
+        <td>1920x1080</td>
+        <td>Eris Boreas</td>
+        <td><a href="#" data-toggle="popover" title="Mushoku Tensei" data-img="wallpaper/03.jpg"><i class="fas fa-search"></i></a></td>
+        <td><i class="fas fa-download"></i></td>
+      </tr>
+      <tr>
+        <td>Erdő</td>
+        <td>Tájkép</td>
+        <td>1920x1080</td>
+        <td>Erdő</td>
+        <td><a href="#" data-toggle="popover" title="Erdő" data-img="wallpaper/15.jpg"><i class="fas fa-search"></i></a></td>
+        <td><i class="fas fa-download"></i></td>
+      </tr>
+      <tr>
+        <td>Monogatari</td>
+        <td>Anime</td>
+        <td>1920x1080</td>
+        <td>-</td>
+        <td><a href="#" data-toggle="popover" title="Monogatari" data-img="wallpaper/04.jpg"><i class="fas fa-search"></i></a></td>
+        <td><i class="fas fa-download"></i></td>
+      </tr>
+      <tr>
+        <td>Alaplap</td>
+        <td>Tech</td>
+        <td>1920x1080</td>
+        <td>IT</td>
+        <td><a href="#" data-toggle="popover" title="Alaplap" data-img="wallpaper/28.jpg"><i class="fas fa-search"></i></a></td>
+        <td><i class="fas fa-download"></i></td>
+      </tr>
+      <tr>
+        <td>Vörös Fa</td>
+        <td>Tájkép</td>
+        <td>1920x1080</td>
+        <td>Fák</td>
+        <td><a href="#" data-toggle="popover" title="Vörös Fa" data-img="wallpaper/16.jpg"><i class="fas fa-search"></i></a></td>
+        <td><i class="fas fa-download"></i></td>
+      </tr>
+      <tr>
+        <td>Processzor</td>
+        <td>Tech</td>
+        <td>1920x1080</td>
+        <td>IT</td>
+        <td><a href="#" data-toggle="popover" title="Processzor" data-img="wallpaper/29.jpg"><i class="fas fa-search"></i></a></td>
+        <td><i class="fas fa-download"></i></td>
+      </tr>
+      <tr>
+        <td>Nisekoi</td>
+        <td>Anime</td>
+        <td>1920x1080</td>
+        <td>Chitoge Kirisaki</td>
+        <td><a href="#" data-toggle="popover" title="Nisekoi" data-img="wallpaper/05.png"><i class="fas fa-search"></i></a></td>
+        <td><i class="fas fa-download"></i></td>
+      </tr>
+      <tr>
+        <td>Javascript</td>
+        <td>Tech</td>
+        <td>1920x1080</td>
+        <td>Programozás</td>
+        <td><a href="#" data-toggle="popover" title="Javascript" data-img="wallpaper/30.jpg"><i class="fas fa-search"></i></a></td>
+        <td><i class="fas fa-download"></i></td>
+      </tr>
+      <tr>
+        <td>Katasztrófa</td>
+        <td>Tájkép/td>
+        <td>1920x1080</td>
+        <td>Katasztrófa</td>
+        <td><a href="#" data-toggle="popover" title="Katasztrófa" data-img="wallpaper/17.jpg"><i class="fas fa-search"></i></a></td>
+        <td><i class="fas fa-download"></i></td>
+      </tr>
+      <tr>
+        <td>TUF</td>
+        <td>Tech</td>
+        <td>1920x1080</td>
+        <td>Gaming</td>
+        <td><a href="#" data-toggle="popover" title="TUF" data-img="wallpaper/31.jpg"><i class="fas fa-search"></i></a></td>
+        <td><i class="fas fa-download"></i></td>
+      </tr>
+      <tr>
+        <td>Alienware</td>
+        <td>Tech</td>
+        <td>1920x1080</td>
+        <td>Gaming</td>
+        <td><a href="#" data-toggle="popover" title="Alienware" data-img="wallpaper/32.jpg"><i class="fas fa-search"></i></a></td>
+        <td><i class="fas fa-download"></i></td>
+      </tr>
+      <tr>
+        <td>One Piece</td>
+        <td>Anime</td>
+        <td>1920x1080</td>
+        <td>Monkey D Luffy</td>
+        <td><a href="#" data-toggle="popover" title="One Piece" data-img="wallpaper/06.jpg"><i class="fas fa-search"></i></a></td>
+        <td><i class="fas fa-download"></i></td>
+      </tr>
+      <tr>
+        <td>Mátrix</td>
+        <td>Tech</td>
+        <td>1920x1080</td>
+        <td>Programozás</td>
+        <td><a href="#" data-toggle="popover" title="Mátrix" data-img="wallpaper/33.jpg"><i class="fas fa-search"></i></a></td>
+        <td><i class="fas fa-download"></i></td>
+      </tr>
+      <tr>
+        <td>Vulkán</td>
+        <td>Tájkép</td>
+        <td>1920x1080</td>
+        <td>Vulkán</td>
+        <td><a href="#" data-toggle="popover" title="Vulkán" data-img="wallpaper/18.jpg"><i class="fas fa-search"></i></a></td>
+        <td><i class="fas fa-download"></i></td>
+      </tr>
+      <tr>
+        <td>Koe No Katachi</td>
+        <td>Anime</td>
+        <td>1920x1080</td>
+        <td>Shouko Nishimiya</td>
+        <td><a href="#" data-toggle="popover" title="Koe No Katachi" data-img="wallpaper/07.png"><i class="fas fa-search"></i></a></td>
+        <td><i class="fas fa-download"></i></td>
+      </tr>
+      <tr>
+        <td>Felhők</td>
+        <td>Tájkép</td>
+        <td>1920x1080</td>
+        <td>Felhők</td>
+        <td><a href="#" data-toggle="popover" title="Felhők" data-img="wallpaper/19.jpg"><i class="fas fa-search"></i></a></td>
+        <td><i class="fas fa-download"></i></td>
+      </tr>
+      <tr>
+        <td>Violet Evergarden</td>
+        <td>Anime</td>
+        <td>1920x1080</td>
+        <td>Violet Evergarden</td>
+        <td><a href="#" data-toggle="popover" title="Violet Evergarden" data-img="wallpaper/08.jpg"><i class="fas fa-search"></i></a></td>
+        <td><i class="fas fa-download"></i></td>
+      </tr>
+      <tr>
+        <td>Erdő mélyén</td>
+        <td>Tájkép</td>
+        <td>1920x1080</td>
+        <td>Erdő</td>
+        <td><a href="#" data-toggle="popover" title="Erdő mélyén" data-img="wallpaper/20.jpg"><i class="fas fa-search"></i></a></td>
+        <td><i class="fas fa-download"></i></td>
+      </tr>
+      <tr>
+        <td>Kacsa</td>
+        <td>Tech</td>
+        <td>1920x1080</td>
+        <td>Joke</td>
+        <td><a href="#" data-toggle="popover" title="Kacsa" data-img="wallpaper/34.png"><i class="fas fa-search"></i></a></td>
+        <td><i class="fas fa-download"></i></td>
+      </tr>
+      <tr>
+        <td>Kimetsu Ho Yaiba</td>
+        <td>Anime</td>
+        <td>1920x1080</td>
+        <td>Tanjiro</td>
+        <td><a href="#" data-toggle="popover" title="Kimetsu Ho Yaiba" data-img="wallpaper/09.png"><i class="fas fa-search"></i></a></td>
+        <td><i class="fas fa-download"></i></td>
+      </tr>
+      <tr>
+        <td>Pihenés</td>
+        <td>Tech</td>
+        <td>1920x1080</td>
+        <td>Programozás</td>
+        <td><a href="#" data-toggle="popover" title="Pihenés" data-img="wallpaper/35.jpg"><i class="fas fa-search"></i></a></td>
+        <td><i class="fas fa-download"></i></td>
+      </tr>
+      <tr>
+        <td>Bolygók</td>
+        <td>Tájkép</td>
+        <td>1920x1080</td>
+        <td>Űr</td>
+        <td><a href="#" data-toggle="popover" title="Bolygók" data-img="wallpaper/21.jpg"><i class="fas fa-search"></i></a></td>
+        <td><i class="fas fa-download"></i></td>
+      </tr>
+      <tr>
+        <td>Blue Period</td>
+        <td>Anime</td>
+        <td>1920x1080</td>
+        <td>Yaguchi Yatora</td>
+        <td><a href="#" data-toggle="popover" title="Blue Period" data-img="wallpaper/10.png"><i class="fas fa-search"></i></a></td>
+        <td><i class="fas fa-download"></i></td>
+      </tr>
+      <tr>
+        <td>Sziget</td>
+        <td>Tájkép</td>
+        <td>1920x1080</td>
+        <td>Sziget</td>
+        <td><a href="#" data-toggle="popover" title="Sziget" data-img="wallpaper/22.jpeg"><i class="fas fa-search"></i></a></td>
+        <td><i class="fas fa-download"></i></td>
+      </tr>
+      <tr>
+        <td>Chuunibyou</td>
+        <td>Anime</td>
+        <td>1920x1080</td>
+        <td>Takanashi Rikka</td>
+        <td><a href="#" data-toggle="popover" title="Chuunibyou" data-img="wallpaper/11.jpg"><i class="fas fa-search"></i></a></td>
+        <td><i class="fas fa-download"></i></td>
+      </tr>
+      <tr>
+        <td>Cseresznyefa</td>
+        <td>Tájkép</td>
+        <td>1920x1080</td>
+        <td>Fák</td>
+        <td><a href="#" data-toggle="popover" title="Cseresznyefa" data-img="wallpaper/23.jpg"><i class="fas fa-search"></i></a></td>
+        <td><i class="fas fa-download"></i></td>
+      </tr>
+      <tr>
+        <td>Kábelek</td>
+        <td>Tech</td>
+        <td>1920x1080</td>
+        <td>Hálózat</td>
+        <td><a href="#" data-toggle="popover" title="Kábelek" data-img="wallpaper/36.jpg"><i class="fas fa-search"></i></a></td>
+        <td><i class="fas fa-download"></i></td>
+      </tr>
+      <tr>
+        <td>Vocaloid</td>
+        <td>Anime</td>
+        <td>1920x1080</td>
+        <td>-</td>
+        <td><a href="#" data-toggle="popover" title="Vocaloid" data-img="wallpaper/12.jpg"><i class="fas fa-search"></i></a></td>
+        <td><i class="fas fa-download"></i></td>
+      </tr>
+      <tr>
+        <td>Eső</td>
+        <td>Tájkép</td>
+        <td>1920x1080</td>
+        <td>Eső</td>
+        <td><a href="#" data-toggle="popover" title="Eső" data-img="wallpaper/24.jpg"><i class="fas fa-search"></i></a></td>
+        <td><i class="fas fa-download"></i></td>
+      </tr>
+    </tbody>
+  </table>
+  
+</div>
+
+<div class="jumbotron text-center" style="margin-bottom:0">
+  <p>Készítette: Csák Patrik, Peterman Márk</p>
+</div>
+
+<script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTable tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
+
+
+<script>
+$(document).ready(function(){
+   $('[data-toggle="popover"]').popover({
+      trigger: 'hover',
+          html: true,
+          content: function () {
+        return '<img class="img-fluid" src="'+$(this).data('img') + '" />';
+          },
+          title: 'Toolbox'
+    }) 
+});
+</script>
+
+
+</body>
+</html>
